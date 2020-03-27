@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>37.3. 4C homework!</title>
+</head>
+<body>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Domácí úkol pro 4.C</h1>
+        <p class="lead">Zadání je jednoduché, níže vidíte v levém sloupci zadávací políčko a v pravém
+            Lorem ipsum text</p>
+        <p>Do textového pole zadáte nějaké jednoduché CSS, které se vám po odeslání promítne v pravém sloupci.</p>
+        <p>Úkol budu kontrolovat pouze na jednoduché css, které pasuje na elementy v pravém sloupci ;)</p>
+        <p><b>Hodně štěstí</b></p>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <form>
+                <div class="form-group">
+                    <label for="css-input">Zde vložte vaše CSS</label>
+                    <textarea class="form-control" id="css-input" rows="20"></textarea>
+                </div>
+                <button id="css-submit" type="submit" class="btn btn-primary mb-2">Použít</button>
+            </form>
+        </div>
+        <div id="loremIpsumText" class="col">
+            <h1>Lorem ipsum text</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae iaculis nibh, et tincidunt
+                massa. Ut commodo ultricies urna id posuere. Praesent consectetur tellus ac vehicula tempor.
+            </p>
+            <p>Cras eget eros a purus lobortis porttitor id sit amet diam. Duis mi sapien, tristique sed pulvinar nec,
+                molestie
+                finibus turpis. </p>
+            <p>Aenean dolor tortor, egestas ultricies condimentum sit amet, tincidunt at libero. Donec
+                sem leo, ornare id lorem non, egestas rhoncus erat. Nullam suscipit ex sit amet massa placerat, quis
+                lobortis arcu dapibus. Nam semper, mi in fermentum tempor, ex ligula gravida libero, vel tincidunt arcu
+                massa in sem.</p>
+            <p> Nam ac neque id felis pretium egestas. Nulla facilisi. Donec vitae nibh eget ante
+                imperdiet posuere. Mauris rhoncus iaculis augue, at lobortis lectus. Duis eu eros leo.</p>
+            <ul>
+                <li>Text jedna</li>
+                <li>Text dva</li>
+                <li>Text tři</li>
+                <li>Text čtyři</li>
+            </ul>
+            <div>
+                Donec vitae ligula et neque aliquam imperdiet auctor nec enim. Maecenas blandit tempor elit, ut finibus
+                orci cursus et. Phasellus metus ante, vestibulum elementum viverra in, imperdiet vel velit. Fusce sed
+                arcu neque. Nam sagittis felis sed ante laoreet, ut sagittis odio maximus. Sed aliquet, nunc eu
+                malesuada placerat, nibh sem facilisis sem, eget tincidunt enim turpis non dui. Nam quis lacus neque.
+                Nulla facilisi. In vitae enim auctor, porta elit at, mollis eros. Sed ornare nibh sagittis magna varius,
+                at aliquet mi aliquam. Pellentesque molestie massa ac lacus varius, et varius leo consectetur. Phasellus
+                et elit nisl.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+<script>
+  $(document).ready(function () {
+    $("form").on("submit", function (event) {
+      alert('karel');
+      event.preventDefault();
+    });
+  });
+</script>
+</body>
+</html>
