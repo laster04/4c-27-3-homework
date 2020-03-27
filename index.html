@@ -10,6 +10,18 @@
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <title>37.3. 4C homework!</title>
+    <style>
+        style{
+  white-space:pre-wrap;
+  display:block;
+  text-align: left;
+  font-size:1em;
+  height:350px;
+  border: 1px solid black;
+  background-color: white;
+}
+style[type="text/css"]{display: none;}
+    </style>
 </head>
 <body>
 <div class="jumbotron jumbotron-fluid">
@@ -27,10 +39,12 @@
         <div class="col">
             <form>
                 <div class="form-group">
-                    <label for="css-input">Zde vložte vaše CSS</label>
-                    <textarea class="form-control" id="css-input" rows="20"></textarea>
+                    <label>Zde vložte vaše CSS, pište prosím jako je níže v příkladu :)</label>
+                    <pre>
+                <style  spellcheck="false" contenteditable="true">h1{background-color: white}</style>
+            </pre>
                 </div>
-                <button id="css-submit" type="submit" class="btn btn-primary mb-2">Použít</button>
+                <h2>Dostupné elementy: .col, #loremIpsumText, p, ul, li, h1</h2>
             </form>
         </div>
         <div id="loremIpsumText" class="col">
@@ -79,12 +93,6 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 <script>
-  $(document).ready(function () {
-    $("form").on("submit", function (event) {
-      alert('karel');
-      event.preventDefault();
-    });
-  });
 </script>
 </body>
 </html>
