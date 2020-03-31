@@ -4,22 +4,23 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
     <title>37.3. 4C homework!</title>
 </head>
 <body>
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
+<div class="jumbotron jumbotron-fluid" style="background-image: url('.idea/power move.jpg');">
+    <div class="container" style="background-color: #e9ecef; border-radius: 25px;">
         <h1 class="display-4">Domácí úkol pro 4.C</h1>
         <p class="lead">Zadání je jednoduché, níže vidíte v levém sloupci zadávací políčko a v pravém
             Lorem ipsum text</p>
         <p>Do textového pole zadáte nějaké jednoduché CSS, které se vám po odeslání promítne v pravém sloupci.</p>
         <p>Úkol budu kontrolovat pouze na jednoduché css, které pasuje na elementy v pravém sloupci ;)</p>
-        <p><b>Hodně štěstí</b></p>
+        <div>
+            <p><b>Hodně štěstí</b></p>
+            <p style="color: #e9ecef; padding: 5px">Díky</p>
+        </div>
     </div>
 </div>
 <div class="container">
@@ -27,13 +28,13 @@
         <div class="col">
             <form>
                 <div class="form-group">
-                    <label for="css-input">Zde vložte vaše CSS</label>
-                    <textarea class="form-control" id="css-input" rows="20"></textarea>
+                    <label for="css-input">Zde vložte vaše CSS (Tags: div, h1, p, li)</label>
+                    <textarea class="form-control" id="css-input" placeholder="Prosím použijte tento formát: $('.cont TAG').css('STYL', 'HODNOTA');" rows="20"></textarea>
                 </div>
-                <button id="css-submit" type="submit" class="btn btn-primary mb-2">Použít</button>
+                <button id="css-submit" type="button" class="btn btn-primary mb-2" onclick="test();">Použít</button>
             </form>
         </div>
-        <div id="loremIpsumText" class="col">
+        <div id="loremIpsumText" class="col cont">
             <h1>Lorem ipsum text</h1>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae iaculis nibh, et tincidunt
@@ -66,7 +67,6 @@
         </div>
     </div>
 </div>
-
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -79,12 +79,13 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 <script>
-  $(document).ready(function () {
-    $("form").on("submit", function (event) {
-      alert('karel');
-      event.preventDefault();
-    });
-  });
+function test() {
+    var headID = document.getElementsByTagName("head")[0];
+    var newScript = document.createElement("script");
+    newScript.type = "text/javascript";
+    newScript.innerHTML = document.getElementById("css-input").value;
+    headID.appendChild(newScript);
+}
 </script>
 </body>
 </html>
